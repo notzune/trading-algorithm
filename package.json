@@ -1,0 +1,26 @@
+{
+  "name": "trading-algorithm",
+  "version": "1.0.0",
+  "description": "Stock trading algorithim built using [Finbert](https://huggingface.co/ProsusAI/finbert).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notzune/trading-algorithm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/notzune/trading-algorithm/issues"
+  },
+  "homepage": "https://github.com/notzune/trading-algorithm#readme",
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.2.5",
+    "semantic-release": "^22.0.10"
+  }
+}
