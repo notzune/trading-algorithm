@@ -40,7 +40,7 @@ def analyze_sentiment(text):
 
 def get_sentiment(probabilities):
     """
-    Determines the sentiment class from the given probabilities.
+    Determines the sentiment class from the given probabilities and prints them.
 
     Args:
     probabilities (torch.Tensor): The probabilities tensor.
@@ -49,6 +49,8 @@ def get_sentiment(probabilities):
     int: The sentiment class (0: Negative, 1: Neutral, 2: Positive).
     """
     probabilities = F.softmax(probabilities, dim=1)
+    print(f"[[Negative, Neutral, Positive]]")
+    print(f"Probabilities: {probabilities}")  # Print raw probabilities
     sentiment = torch.argmax(probabilities, dim=1)
     return sentiment.item()
 
