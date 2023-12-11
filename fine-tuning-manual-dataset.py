@@ -2,6 +2,7 @@ import torch
 from torch.optim import AdamW
 from torch.utils.data import TensorDataset, DataLoader, random_split
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
+from tqdm import tqdm
 
 # Set the model name
 model_name = "ProsusAI/finbert"
