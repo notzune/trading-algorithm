@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/notzune/trading-algorithm/compare/v1.1.0...v1.2.0) (2023-12-11)
+
+
+### Bug Fixes
+
+* change encoding for dataset to utf-16 ([f08e7c1](https://github.com/notzune/trading-algorithm/commit/f08e7c1b77210ed330907ee4395092f9f7dfc058))
+
+
+### Features
+
+* manual fine-tuning on own dataset ([3b2a090](https://github.com/notzune/trading-algorithm/commit/3b2a090f8dbe761c5e2d58ffbcedb2c582fb09d7))
+
 # [1.1.0](https://github.com/notzune/trading-algorithm/compare/v1.0.0...v1.1.0) (2023-12-10)
 
 
