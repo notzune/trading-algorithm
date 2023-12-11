@@ -159,3 +159,7 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 .DS_Store
+finetuned-finbert-checkpoint-epoch-2/model.safetensors
+finetuned-finbert-checkpoint-epoch-1/model.safetensors
+finetuned-finbert/model.safetensors
+finetuned-finbert-checkpoint-epoch-3/model.safetensors
