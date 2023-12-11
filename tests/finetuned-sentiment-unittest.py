@@ -6,6 +6,8 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer
 class FinBERTTest(unittest.TestCase):
     def setUp(self):
         model_dir = "/Users/zeyad/Documents/GitHub/trading-algorithm/finetuned-finbert"
+        tokenizer = AutoTokenizer.from_pretrained("ProsusAI/finbert")
+        tokenizer.save_pretrained("/Users/zeyad/Documents/GitHub/trading-algorithm/finetuned-finbert")
         self.tokenizer = AutoTokenizer.from_pretrained(model_dir)
         self.model = AutoModelForSequenceClassification.from_pretrained(model_dir)
 
