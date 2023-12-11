@@ -143,5 +143,6 @@ for epoch in range(epochs):
 
 # Save the final fine-tuned model
 model_path = "./finetuned-finbert"
-model.save_pretrained(model_path)
+tokenizer = AutoTokenizer.from_pretrained("ProsusAI/finbert")
+tokenizer.save_pretrained(model_path)
 print(f"Model saved to {model_path}")
