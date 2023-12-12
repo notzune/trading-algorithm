@@ -4,13 +4,23 @@ import json
 import logging
 
 
-def process_new_dataset(data, tokenizer, label_map=None, file_format='txt', max_length=512):
+def process_new_dataset(data, tokenizer, file_format='txt', max_length=512):
     """
     Enhanced function to process a new dataset for BERT-like models.
-    ...
+
+    Parameters:
+    - data (str or list): File path to the dataset or a list of sentences.
+    - tokenizer (AutoTokenizer): Tokenizer for encoding the sentences.
+    - file_format (str): Format of the dataset file ('txt', 'csv', etc.).
+    - max_length (int): Maximum length for tokenization.
+
+    Returns:
+    - inputs (dict): Tokenized sentences.
+    - labels (torch.Tensor): Tensor of labels.
     """
+
     sentences, labels = [], []
-    label_set = set()
+    label_map = {}
 
     try:
         if isinstance(data, str):  # If 'data' is a file path
@@ -18,30 +28,22 @@ def process_new_dataset(data, tokenizer, label_map=None, file_format='txt', max_
                 with open(data, 'r', encoding='utf-8') as file:
                     for line in file:
                         sentence, label = extract_sentence_and_label(line, file_format)
+                        if label not in label_map:
+                            label_map[label] = len(label_map)
                         sentences.append(sentence)
-                        labels.append(label)
-                        label_set.add(label)
+                        labels.append(label_map[label])
             elif file_format == 'csv':
                 df = pd.read_csv(data)
-                # Assuming the CSV has columns 'sentence' and 'label'
-                sentences, labels = list(df['sentence']), list(df['label'])
+                # Logic for processing CSV files
             elif file_format == 'json':
                 with open(data, 'r') as file:
                     json_data = json.load(file)
-                    # Implement JSON parsing logic based on your JSON structure
-                    # Example: sentences = [item['sentence'] for item in json_data]
+                    # Logic for processing JSON files
             else:
                 logging.warning(f"Unsupported file format: {file_format}")
-
         elif isinstance(data, list):  # If 'data' is a list of sentences
             sentences = data
             labels = [0] * len(data)  # Placeholder labels
-
-        if not label_map:
-            label_map = {label: idx for idx, label in enumerate(sorted(label_set))}
-
-        # Convert string labels to integers based on label_map
-        labels = [label_map[label] for label in labels]
 
         inputs = tokenizer(sentences, padding='max_length', truncation=True, max_length=max_length, return_tensors='pt')
         labels_tensor = torch.tensor(labels)
