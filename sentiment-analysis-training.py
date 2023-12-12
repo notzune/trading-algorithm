@@ -1,4 +1,4 @@
-import torch
+from datasets import load_dataset
 from torch.utils.data import DataLoader, TensorDataset, random_split
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 from utils import fine_tune_model, process_new_dataset
@@ -7,7 +7,7 @@ model_dir = "/finetuned-finbert"  # Adjust as necessary
 model = AutoModelForSequenceClassification.from_pretrained(model_dir)
 tokenizer = AutoTokenizer.from_pretrained(model_dir)
 
-dataset_dir = ""
+dataset_dir = load_dataset("zeroshot/twitter-financial-news-sentiment")
 # Assuming 'new_data' is either a file path or a list of sentences
 new_inputs, new_labels_tensor = process_new_dataset(dataset_dir, tokenizer)
 
