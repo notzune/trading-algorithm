@@ -73,7 +73,7 @@ def tokenize_sentences(sentences):
 
 
 # Example usage of the above functions
-file_path = './datasets/fin-phrase-bank/Sentences_AllAgree.txt'
+file_path = '../datasets/fin-phrase-bank/Sentences_AllAgree.txt'
 lines = read_txt_file(file_path)
 sentences, labels = preprocess_data(lines)
 encoded_inputs = tokenize_sentences(sentences)
@@ -142,7 +142,7 @@ for epoch in range(epochs):
     print(f"Checkpoint saved to {checkpoint_path}")
 
 # Save the final fine-tuned model
-model_path = "./finetuned-finbert"
+model_path = "../finetuned-finbert"
 tokenizer = AutoTokenizer.from_pretrained("ProsusAI/finbert")
 tokenizer.save_pretrained(model_path)
 print(f"Model saved to {model_path}")
