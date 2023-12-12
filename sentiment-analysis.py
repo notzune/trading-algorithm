@@ -1,6 +1,6 @@
 import torch
-from transformers import AutoModelForSequenceClassification, AutoTokenizer
 import torch.nn.functional as F
+from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 
 def sentiment_analysis(text, verbose=False, model_path="./finetuned-finbert", tokenizer_path="./finetuned-finbert"):
