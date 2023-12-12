@@ -2,7 +2,7 @@ from datasets import load_dataset
 from torch.utils.data import DataLoader, TensorDataset, random_split
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
-from utils import fine_tune_model, process_new_dataset
+from trainutils import fine_tune_model, process_new_dataset
 
 model_dir = "./finetuned-finbert"  # Adjust as necessary
 model = AutoModelForSequenceClassification.from_pretrained(model_dir)
