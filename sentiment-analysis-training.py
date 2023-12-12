@@ -8,9 +8,15 @@ model_dir = "./finetuned-finbert"  # Adjust as necessary
 model = AutoModelForSequenceClassification.from_pretrained(model_dir)
 tokenizer = AutoTokenizer.from_pretrained(model_dir)
 
-dataset_dir = load_dataset("zeroshot/twitter-financial-news-sentiment")
-# Assuming 'new_data' is either a file path or a list of sentences
-new_inputs, new_labels_tensor = process_new_dataset(dataset_dir, tokenizer)
+# Load the dataset
+dataset = load_dataset("zeroshot/twitter-financial-news-sentiment")
+
+# Extract sentences and labels from the dataset
+train_sentences = dataset['train']['text']
+train_labels = dataset['train']['label']
+
+# Process the new data
+new_inputs, new_labels_tensor = process_new_dataset(train_sentences, tokenizer)
 
 new_dataset = TensorDataset(new_inputs['input_ids'], new_inputs['attention_mask'], new_labels_tensor)
 
