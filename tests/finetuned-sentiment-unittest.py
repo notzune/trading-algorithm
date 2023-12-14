@@ -13,8 +13,10 @@ class FinBERTTest(unittest.TestCase):
 
     def test_on_unseen_data(self):
         test_sentences = [
-            "The company had a massive growth in profits this quarter.",
-            "Market fluctuation has led to a considerable loss in revenue.",
+            "$BLUE FDA Approval today, but bad label (black box warning). It's important to understand the nuances and market expectations before buying FDA Approvals. I learned this lesson the hard way years ago, but it's paying off on days like today.",
+            "$YELL $YELLQ Update. $YELLQ is up 47% today on the results of the 1st round of terminal sales, including $870m from the largest bidder, $XPO. I've posted quite a bit of DD on MFN Partners' aggressive buying of $YELLQ stock despite an imminent bankruptcy, and their relationship with $XPO",
+            "Tesla Recalls 2 Million Cars to Fix Autopilot Safety Flaws",
+            "We expect public builders to continue to gain market share of both new home sales and the overall transaction market in 2024, Reichardt wrote. But we also do not expect a repeat of 2023's share price performance."
             # Add more test sentences as needed
         ]
 
@@ -34,7 +36,7 @@ class FinBERTTest(unittest.TestCase):
             print("-" * 80)
 
         # If you have expected labels, compare them
-        expected_labels = [2, 0]  # Replace with your expected labels for the test sentences
+        expected_labels = [2, 2, 0, 1]  # Replace with your expected labels for the test sentences
         predicted_labels = probs.argmax(dim=1).tolist()
         self.assertEqual(predicted_labels, expected_labels)
 

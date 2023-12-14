@@ -9,7 +9,7 @@ model = AutoModelForSequenceClassification.from_pretrained(model_dir)
 tokenizer = AutoTokenizer.from_pretrained(model_dir)
 
 # Load the dataset
-dataset = load_dataset("zeroshot/twitter-financial-news-sentiment")
+dataset = load_dataset("FinanceInc/auditor_sentiment")
 
 # Extract sentences and labels from the dataset
 train_sentences = dataset['train']['text']

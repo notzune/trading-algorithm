@@ -1,24 +1,33 @@
 # [1.3.0](https://github.com/notzune/trading-algorithm/compare/v1.2.0...v1.3.0) (2023-12-12)
 
-
 ### Bug Fixes
 
-* bad refactor with training utils ([6e6936d](https://github.com/notzune/trading-algorithm/commit/6e6936db4d103cdd3b98100e7cf3706423ed58c0))
-* correctly load/parse dataset from hf ([cd4bb07](https://github.com/notzune/trading-algorithm/commit/cd4bb076f3d1938f910b1e35191d1c170a12f3e3))
-* fix unit test to be more verbose ([bf1a7c9](https://github.com/notzune/trading-algorithm/commit/bf1a7c901a13d3826de277c9e08fe28c6c492776))
-* import correct module ([5ec4780](https://github.com/notzune/trading-algorithm/commit/5ec4780ff1ad8bf5869613c8a47dcbf418155b25))
+* bad refactor with training
+  utils ([6e6936d](https://github.com/notzune/trading-algorithm/commit/6e6936db4d103cdd3b98100e7cf3706423ed58c0))
+* correctly load/parse dataset from
+  hf ([cd4bb07](https://github.com/notzune/trading-algorithm/commit/cd4bb076f3d1938f910b1e35191d1c170a12f3e3))
+* fix unit test to be more
+  verbose ([bf1a7c9](https://github.com/notzune/trading-algorithm/commit/bf1a7c901a13d3826de277c9e08fe28c6c492776))
+* import correct
+  module ([5ec4780](https://github.com/notzune/trading-algorithm/commit/5ec4780ff1ad8bf5869613c8a47dcbf418155b25))
 * import tqdm ([c453a89](https://github.com/notzune/trading-algorithm/commit/c453a89e5ed5646fde8e2eae3858c9855d416c64))
-* incorrect model path ([d449265](https://github.com/notzune/trading-algorithm/commit/d449265777e17c148593fb5f000beca80ae1118b))
-* more debug messaging ([2455ce4](https://github.com/notzune/trading-algorithm/commit/2455ce470e9ef121b7d9375cd3cdd0ba5ebca93a))
-* saving the tokenizer to the finetuned model ([50a05ef](https://github.com/notzune/trading-algorithm/commit/50a05ef48299da5a31c50753c67c501aef974611))
-
+* incorrect model
+  path ([d449265](https://github.com/notzune/trading-algorithm/commit/d449265777e17c148593fb5f000beca80ae1118b))
+* more debug
+  messaging ([2455ce4](https://github.com/notzune/trading-algorithm/commit/2455ce470e9ef121b7d9375cd3cdd0ba5ebca93a))
+* saving the tokenizer to the finetuned
+  model ([50a05ef](https://github.com/notzune/trading-algorithm/commit/50a05ef48299da5a31c50753c67c501aef974611))
 
 ### Features
 
-* create module for processing new datasets ([4e91717](https://github.com/notzune/trading-algorithm/commit/4e9171779579c7b7acbad5c9046a3a67a145d6b1))
-* create training script ([0a74768](https://github.com/notzune/trading-algorithm/commit/0a74768d424c884825e3df3dc40604e021e2beec))
-* created a fine-tuning script ([8365c3c](https://github.com/notzune/trading-algorithm/commit/8365c3c08f4a230283ee444362ad2d5675375f26))
-* made sentiment-analysis function for use in application ([e7554c9](https://github.com/notzune/trading-algorithm/commit/e7554c9bba49001f1c357bdae7856568cb59d40c))
+* create module for processing new
+  datasets ([4e91717](https://github.com/notzune/trading-algorithm/commit/4e9171779579c7b7acbad5c9046a3a67a145d6b1))
+* create training
+  script ([0a74768](https://github.com/notzune/trading-algorithm/commit/0a74768d424c884825e3df3dc40604e021e2beec))
+* created a fine-tuning
+  script ([8365c3c](https://github.com/notzune/trading-algorithm/commit/8365c3c08f4a230283ee444362ad2d5675375f26))
+* made sentiment-analysis function for use in
+  application ([e7554c9](https://github.com/notzune/trading-algorithm/commit/e7554c9bba49001f1c357bdae7856568cb59d40c))
 
 # [1.2.0](https://github.com/notzune/trading-algorithm/compare/v1.1.0...v1.2.0) (2023-12-11)
 

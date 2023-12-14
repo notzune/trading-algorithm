@@ -1,9 +1,11 @@
-from torch.optim import AdamW
-from tqdm import tqdm
 import json
 import logging
+
 import pandas as pd
 import torch
+from torch.optim import AdamW
+from tqdm import tqdm
+
 
 def fine_tune_model(new_train_loader, new_val_loader, model, tokenizer, epochs=3):
     optimizer = AdamW(model.parameters(), lr=5e-5)
