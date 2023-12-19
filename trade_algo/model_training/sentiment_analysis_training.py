@@ -4,7 +4,7 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 from train_utils import fine_tune_model, process_new_dataset
 
-model_dir = "../finetuned-finbert"
+model_dir = "../../finetuned-finbert"
 model = AutoModelForSequenceClassification.from_pretrained(model_dir)
 tokenizer = AutoTokenizer.from_pretrained(model_dir)
 

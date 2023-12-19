@@ -47,7 +47,7 @@ def fine_tune_model(new_train_loader, new_val_loader, model, tokenizer, epochs=3
         print(f"Checkpoint saved to {checkpoint_path}")
 
     # Save the final fine-tuned model
-    model_path = "../finetuned-finbert"
+    model_path = "../../finetuned-finbert"
     model.save_pretrained(model_path)
     tokenizer.save_pretrained(model_path)
     print(f"Model and tokenizer saved to {model_path}")
