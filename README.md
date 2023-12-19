@@ -39,7 +39,7 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 
 ## Disclaimer
 
-This project was built as a hobby project by someone who has little to no knowledge about the stock market besides some light reading. The creator(s) and maintainer(s) of this project hold no liability in the event that you actually _use_ this algorithm for your own trading. This is strictly for educational and testing purposes **_ONLY_** and by no means should be used in an actual professional or commercial environment. 
+This project was built as a hobby project by someone who has little to no knowledge about the stock market besides some light reading. The creator(s) and maintainer(s) of this project hold no liability in the event that you actually _use_ any of the files in this repository. This is strictly for educational and testing purposes **_ONLY_** and by no means should be used in an actual production or real-life environment. 
 
 ---
 
