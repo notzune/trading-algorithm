@@ -1,3 +1,14 @@
+# [1.4.0](https://github.com/notzune/trading-algorithm/compare/v1.3.0...v1.4.0) (2023-12-19)
+
+
+### Features
+
+* create rsi analysis script ([5bf63a9](https://github.com/notzune/trading-algorithm/commit/5bf63a9741aa3353fd6a03b5d456cc03fd133776))
+* create short potential calculator ([4033c63](https://github.com/notzune/trading-algorithm/commit/4033c63901ce91967c203f8516db2c1fc8964fe4))
+* create trade algo ([36888cb](https://github.com/notzune/trading-algorithm/commit/36888cb43076c5ac9c70d4d00ed5a4e81326d9f3))
+* create vwap calculator ([543b834](https://github.com/notzune/trading-algorithm/commit/543b8340d1ee1308f57d136c54c0ad65def502c4))
+* new trade util package ([b2da05e](https://github.com/notzune/trading-algorithm/commit/b2da05e8b267803b7ed008691165e38a45da0609))
+
 # [1.3.0](https://github.com/notzune/trading-algorithm/compare/v1.2.0...v1.3.0) (2023-12-12)
 
 ### Bug Fixes
